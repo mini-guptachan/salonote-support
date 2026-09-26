@@ -302,6 +302,12 @@ strong { font-weight: 700; }
 .privacy-grid h3 { font-size: 19px; margin-bottom: 10px; }
 .privacy-grid p { color: var(--ink-soft); font-size: 14px; text-align: left; }
 
+.privacy-label { display: inline-flex; align-items: center; gap: 14px; margin-top: 28px; padding: 12px 24px 12px 14px; border-radius: 999px; background: #fff; border: 1px solid var(--line); box-shadow: var(--shadow-sm); text-align: left; }
+.privacy-label-icon { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 50%; background: var(--grad); flex: none; }
+.privacy-label-icon svg { width: 24px; height: 24px; fill: none; stroke: #fff; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.privacy-label small { display: block; color: var(--muted); font-size: 12px; font-weight: 600; line-height: 1.4; }
+.privacy-label strong { display: block; font-family: var(--font-head); font-size: 20px; line-height: 1.4; }
+
 /* plans */
 .plans { background: var(--soft-grad); }
 .plan-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; max-width: 900px; margin: 0 auto; align-items: stretch; }
