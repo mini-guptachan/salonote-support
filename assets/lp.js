@@ -7,6 +7,14 @@
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const yen = (value) => "¥" + Math.round(value).toLocaleString("ja-JP");
   const $ = (id) => document.getElementById(id);
+  const trackOnce = (() => {
+    const sent = new Set();
+    return (name, params) => {
+      if (sent.has(name) || typeof window.salonoteTrack !== "function") return;
+      sent.add(name);
+      window.salonoteTrack(name, params);
+    };
+  })();
 
   /* ---------- header border on scroll & sticky CTA ---------- */
   const header = document.querySelector(".site-header");
@@ -122,6 +130,7 @@
   }
 
   function changeQty(id, delta) {
+    trackOnce("demo_interact", { demo_action: "change_quantity" });
     const before = calculate().total;
     const next = (state.qty[id] || 0) + delta;
     if (next <= 0) {
@@ -152,6 +161,7 @@
     const staffView = $("demoStaff");
     const presentView = $("demoPresent");
     $("demoPresentBtn").addEventListener("click", () => {
+      trackOnce("demo_present", {});
       const result = calculate();
       $("presentLines").innerHTML = state.order.length
         ? state.order.map((id) => {
@@ -193,7 +203,10 @@
       $("simResult").innerHTML =
         `月額${yen(monthly)}のサービスなら、<strong>${breakEven}か月目</strong>からsalonoteのほうがおトク。3年間で<strong>${yen(threeYears - PRO_PRICE)}</strong>の差になります。`;
     };
-    fee.addEventListener("input", update);
+    fee.addEventListener("input", () => {
+      trackOnce("cost_simulator_use", {});
+      update();
+    });
     update();
   }
 

@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <!--GA-->
+  <title>ネイルサロンの料金計算の基本｜税込・税抜、消費税の端数処理、割引</title>
+  <meta name="description" content="ネイルサロンの料金計算を具体例で解説。税込価格から消費税を求める方法、税抜表示の計算、切り捨て・四捨五入などの端数処理、金額値引きと割合値引きの計算の順番がわかります。">
+  <link rel="canonical" href="https://salonote.ohm.software/guide/nail-price-calculation/">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+  <meta name="apple-itunes-app" content="app-id=6805546874">
+  <meta name="theme-color" content="#fbeef7">
+  <meta name="format-detection" content="telephone=no">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="salonote（サロノート）">
+  <meta property="og:title" content="ネイルサロンの料金計算の基本｜税込・税抜、消費税の端数処理、割引">
+  <meta property="og:description" content="ネイルサロンの料金計算を具体例で解説。税込価格から消費税を求める方法、税抜表示の計算、切り捨て・四捨五入などの端数処理、金額値引きと割合値引きの計算の順番がわかります。">
+  <meta property="og:url" content="https://salonote.ohm.software/guide/nail-price-calculation/">
+  <meta property="og:image" content="https://salonote.ohm.software/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="../../assets/favicon.png">
+  <link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@700;900&display=swap">
+  <link rel="stylesheet" href="../../assets/lp.css">
+  <link rel="stylesheet" href="../../assets/guide.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://salonote.ohm.software/guide/nail-price-calculation/#article",
+      "headline": "ネイルサロンの料金計算の基本｜税込・税抜表示、消費税の端数処理、割引の計算方法",
+      "description": "ネイルサロンの料金計算を具体例で解説。税込価格から消費税を求める方法、税抜表示の計算、切り捨て・四捨五入などの端数処理、金額値引きと割合値引きの計算の順番がわかります。",
+      "inLanguage": "ja",
+      "datePublished": "2026-09-27",
+      "dateModified": "2026-09-27",
+      "mainEntityOfPage": "https://salonote.ohm.software/guide/nail-price-calculation/",
+      "image": "https://salonote.ohm.software/assets/og-image.jpg",
+      "author": {
+        "@type": "Organization",
+        "@id": "https://salonote.ohm.software/#organization",
+        "name": "salonote",
+        "url": "https://salonote.ohm.software/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://salonote.ohm.software/#organization",
+        "name": "salonote",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://salonote.ohm.software/assets/icon-256.png"
+        }
+      },
+      "about": [
+        "ネイルサロン",
+        "料金計算",
+        "消費税",
+        "端数処理",
+        "割引"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "salonote",
+          "item": "https://salonote.ohm.software/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "お役立ち記事",
+          "item": "https://salonote.ohm.software/guide/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "ネイルサロンの料金計算の基本",
+          "item": "https://salonote.ohm.software/guide/nail-price-calculation/"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">本文へ移動</a>
+  <header class="site-header scrolled" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="../../" aria-label="salonote トップへ">
+        <img src="../../assets/icon-256.png" alt="" width="36" height="36">
+        <span>salonote</span>
+      </a>
+      <nav class="header-nav" aria-label="サイト内メニュー">
+        <a href="../../#about">salonoteとは</a>
+        <a href="../../#features">機能</a>
+        <a href="../../#plans">料金プラン</a>
+        <a href="../../guide/">お役立ち記事</a>
+      </nav>
+      <a class="btn btn-small js-store-link" href="https://apps.apple.com/jp/app/id6805546874" data-cta="guide-header">無料ダウンロード</a>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <ol>
+        <li><a href="../../">salonote</a></li>
+        <li><a href="../../guide/">お役立ち記事</a></li>
+        <li aria-current="page">ネイルサロンの料金計算の基本</li>
+      </ol>
+    </nav>
+    <article class="article">
+      <header class="article-head">
+        <span class="article-tag">料金計算</span>
+        <h1>ネイルサロンの料金計算の基本｜税込・税抜表示、消費税の端数処理、割引の計算方法</h1>
+        <p class="article-meta">公開日：<time datetime="2026-09-27">2026年9月27日</time>　文：salonote</p>
+        <p class="article-lead">ワンカラーにストーンを数個、リピーター割を10%。ネイルサロンのお会計は、数量のあるオプションや割引、消費税が組み合わさるため、毎回手で計算するとミスが起きやすくなります。この記事では、料金計算の基本となる考え方を具体例で整理します。</p>
+      </header>
+      <section class="summary-box" aria-labelledby="summary-title">
+        <h2 id="summary-title">この記事の要点</h2>
+        <ul>
+            <li>消費者向けの料金は、消費税を含めた総額表示が基本（2021年4月から義務化）</li>
+            <li>税込価格に含まれる消費税（10%）は「税込金額 × 10 ÷ 110」で求める</li>
+            <li>消費税の端数処理（切り捨て・四捨五入・切り上げ）はサロンで決めてよい</li>
+            <li>割引は税込の合計から差し引き、割引後の金額に対して消費税を計算する</li>
+        </ul>
+      </section>
+      <nav class="toc" aria-labelledby="toc-title">
+        <h2 id="toc-title">目次</h2>
+        <ol>
+            <li><a href="#display">税込表示と税抜表示</a></li>
+            <li><a href="#tax">消費税の計算方法</a></li>
+            <li><a href="#rounding">端数処理のルール</a></li>
+            <li><a href="#discount">割引の計算方法</a></li>
+            <li><a href="#example">計算例：オプションと割引がある場合</a></li>
+            <li><a href="#summary">まとめ</a></li>
+        </ol>
+      </nav>
+      <div class="prose">
+        <h2 id="display">税込表示と税抜表示</h2>
+        <p>一般のお客様に向けた料金表示は、2021年4月から消費税を含めた「総額表示」が義務になっています。「ワンカラー 6,500円（税込）」のように表示し、税抜価格を併記する場合も、総額がはっきりわかるようにします。</p>
+        <p>サロンの料金表を税込で作っている場合、お会計の合計もそのまま税込の金額になり、消費税は「うち消費税」として内訳で示します。税抜で料金を管理している場合は、合計に消費税を加えてお支払い金額を出します。</p>
+
+        <h2 id="tax">消費税の計算方法</h2>
+        <h3>税込価格から消費税を求める（内税）</h3>
+        <p>標準税率10%の場合、税込金額に含まれる消費税は次の式で求めます。</p>
+        <p class="example">消費税 ＝ 税込金額 × 10 ÷ 110<br>例：税込 7,155円 → 7,155 × 10 ÷ 110 ＝ 650.45… → <strong>650円</strong>（切り捨ての場合）</p>
+        <h3>税抜価格に消費税を加える（外税）</h3>
+        <p class="example">お支払い金額 ＝ 税抜金額 ＋ 税抜金額 × 10%<br>例：税抜 7,155円 → 消費税 715.5円 → 切り捨てで715円 → <strong>お支払い 7,870円</strong></p>
+
+        <h2 id="rounding">端数処理のルール</h2>
+        <p>消費税の計算で1円未満の端数が出たときの処理（切り捨て・四捨五入・切り上げ）は、事業者が決めてかまいません。大切なのは、<strong>サロンの中でルールを統一すること</strong>です。スタッフによって処理が違うと、同じ内容でもお会計の金額が変わってしまいます。</p>
+        <p class="note">インボイス制度（適格請求書）では、消費税額の端数処理は「1枚の請求書につき、税率ごとに1回」と定められています。メニューごとに端数処理してから合計する方法は認められないため、合計金額に対してまとめて計算する形にしておくと安心です。</p>
+
+        <h2 id="discount">割引の計算方法</h2>
+        <p>割引には、金額を差し引く「金額値引き」と、割合で差し引く「割合値引き」があります。</p>
+        <ul>
+          <li><strong>金額値引き</strong>：合計から決まった金額を差し引く（例：初回500円引き）</li>
+          <li><strong>割合値引き</strong>：合計に対して割合で差し引く（例：リピーター割10%）</li>
+        </ul>
+        <p>割合値引きは、施術中に数量が増えれば割引額も変わります。ストーンを追加したあとに割引額を計算し直すのを忘れると、表示とお会計の金額がずれる原因になります。消費税は、割引を差し引いたあとの金額に対して計算します。</p>
+
+        <h2 id="example">計算例：オプションと割引がある場合</h2>
+        <p>税込表示・税率10%・端数切り捨てのサロンで、次の内容を施術した場合の計算例です。</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>項目</th><th class="num">単価</th><th class="num">数量</th><th class="num">金額</th></tr></thead>
+            <tbody>
+              <tr><td>ワンカラー</td><td class="num">6,500円</td><td class="num">1</td><td class="num">6,500円</td></tr>
+              <tr><td>マグネット変更</td><td class="num">1,000円</td><td class="num">1</td><td class="num">1,000円</td></tr>
+              <tr><td>ストーンM</td><td class="num">150円</td><td class="num">3個</td><td class="num">450円</td></tr>
+              <tr><td>割引前合計</td><td></td><td></td><td class="num">7,950円</td></tr>
+              <tr><td>リピーター割（10%）</td><td></td><td></td><td class="num">−795円</td></tr>
+              <tr class="total"><td>お支払い合計</td><td></td><td></td><td class="num">7,155円</td></tr>
+              <tr><td>うち消費税（10%）</td><td></td><td></td><td class="num">650円</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>割引額は 7,950円 × 10% ＝ 795円、お支払い合計は 7,950円 − 795円 ＝ 7,155円です。内税の消費税は 7,155円 × 10 ÷ 110 ＝ 650.45…円を切り捨てて650円になります。</p>
+
+        <h2 id="summary">まとめ</h2>
+        <p>ネイルサロンの料金計算は、「税込の総額で考える」「端数処理のルールを統一する」「割引は税計算の前に差し引く」の3点を押さえれば迷いません。施術中にオプションが増えるたびに計算し直す必要があるため、計算を自動化できる道具を使うと、ミスとお客様への説明の手間を減らせます。</p>
+      </div>
+        <aside class="cta-box" aria-label="salonoteの紹介">
+          <img src="../../assets/icon-256.png" alt="" width="84" height="84" loading="lazy">
+          <div>
+            <h2>税込・税抜、端数処理、割引まで自動で計算</h2>
+            <p>salonoteでは、税込／税抜表示・税率・端数処理をサロン全体で一括設定でき、金額値引き・割合値引きも数量の変更に合わせて自動で計算し直されます。</p>
+            <a class="btn js-store-link" href="https://apps.apple.com/jp/app/id6805546874" data-cta="guide-article">App Storeで無料ダウンロード</a>
+          </div>
+        </aside>
+      <section class="related" aria-labelledby="related-title">
+        <h2 id="related-title">あわせて読みたい</h2>
+        <div class="guide-grid">
+          <a class="guide-card" href="../../guide/nail-extra-fee-trouble/">
+            <span class="guide-tag">お会計</span>
+            <h3>ネイルの追加料金トラブルを防ぐ5つの方法</h3>
+            <p>「思ったより高い」と言われないための、料金の伝え方と仕組みづくり。</p>
+          </a>
+          <a class="guide-card" href="../../guide/nail-salon-app-cost/">
+            <span class="guide-tag">アプリ選び</span>
+            <h3>顧客管理アプリは月額と買い切りどちらがお得？</h3>
+            <p>3年間の総額で比べる費用の考え方と、失敗しない選び方。</p>
+          </a>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="brand" href="../../"><img src="../../assets/icon-256.png" alt="" width="28" height="28"><span>salonote</span></a>
+      <nav aria-label="フッター">
+        <a href="../../guide/">お役立ち記事</a>
+        <a href="../../privacy/">プライバシーポリシー</a>
+        <a href="../../support/">サポート・お問い合わせ</a>
+        <a href="https://apps.apple.com/jp/app/id6805546874" class="js-store-link" data-cta="guide-footer">App Store</a>
+      </nav>
+      <small>© 2026 salonote</small>
+    </div>
+  </footer>
+  <script src="../../assets/site.js" defer></script>
+</body>
+</html>
