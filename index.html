@@ -12,7 +12,7 @@
     gtag('config', 'G-GY3T2BDY73');
   </script>
   <title>salonote｜ネイルサロンの会計・顧客カルテアプリ（買い切り）</title>
-  <meta name="description" content="ネイルサロン向けの会計・顧客カルテ・予約管理アプリ。施術中の追加料金がその場で合計に反映され、お客様に明細を見せて会計できます。無料で開始、プロ版は月額なしの買い切り15,000円。iPhone・iPad対応。">
+  <meta name="description" content="ネイルサロン向けの会計・顧客カルテ・予約管理アプリ。施術中の追加料金がその場で合計に反映され、お客様に明細を見せて会計できるので、料金への不安による失客も防げます。無料で開始、プロ版は月額なしの買い切り15,000円。iPhone・iPad対応。">
   <link rel="canonical" href="https://salonote.ohm.software/">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
   <meta name="author" content="salonote">
@@ -127,6 +127,7 @@
       "featureList": [
         "施術中のリアルタイム料金計算",
         "お客様提示モード（PINで解除）",
+        "お客様への明細提示による料金トラブル・失客の防止",
         "顧客カルテ（カルテNO自動採番・フリガナ検索・施術写真・スタッフ専用メモ）",
         "予約カレンダー（スタッフ指定・フリー・未定）",
         "会計履歴（月別・日付指定で検索）",
@@ -228,6 +229,14 @@
         },
         {
           "@type": "Question",
+          "name": "お客様にとってはどんなメリットがありますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "施術中に追加や変更をしても、その場で合計金額がわかるので「結局いくらになるんだろう」という不安がなくなります。お会計ではメニューごとの明細を見て納得して支払えるため、料金への不信感が生まれにくく、サロンにとっても失客の防止やリピートにつながります。"
+          }
+        },
+        {
+          "@type": "Question",
           "name": "SquareやAirレジなどの決済サービスと一緒に使えますか？",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -291,6 +300,7 @@
       </a>
       <nav class="header-nav" aria-label="ページ内メニュー">
         <a href="#visible-pricing">料金の見える化</a>
+        <a href="#customer-trust">お客様の安心</a>
         <a href="#features">機能</a>
         <a href="#plans">料金プラン</a>
         <a href="#faq">よくある質問</a>
@@ -448,6 +458,7 @@
                 <li>自宅サロン・1人サロン、スタッフ数名の小さなお店</li>
                 <li>ストーンやアートなど、施術中の追加メニューが多い</li>
                 <li>お会計での「思ったより高い」を防ぎたい</li>
+                <li>料金への不信感による失客を防ぎ、リピート率を上げたい</li>
                 <li>顧客管理アプリに毎月の料金を払いたくない</li>
                 <li>施術台の横にiPadやiPhoneを置いて使いたい</li>
               </ul>
@@ -528,6 +539,71 @@
             <p>税込／税抜表示、税率、切り捨て・四捨五入・切り上げを、サロン全体で一括設定できます。</p>
           </li>
         </ul>
+      </div>
+    </section>
+
+    <!-- ============ CUSTOMER TRUST ============ -->
+    <section class="section trust-customer" id="customer-trust" aria-labelledby="trust-title">
+      <div class="container">
+        <header class="point-head center">
+          <p class="point-label"><span>WHY</span>お客様の安心とリピート</p>
+          <h2 class="section-title" id="trust-title"><span class="nb">お客様の「不安」を</span><span class="nb">なくすことが、</span><br><span class="nb">いちばんの</span><span class="nb">失客対策。</span></h2>
+          <p class="section-lead">料金の見える化は、サロンのためだけの機能ではありません。施術中に追加や変更をしたとき、お客様も「いくらになったんだろう」と心の中で不安を抱えています。その小さなモヤモヤを残さないことが、長く通ってもらえる信頼につながります。</p>
+        </header>
+
+        <div class="voice-grid">
+          <div class="voices" aria-label="お客様が感じやすい不安の例">
+            <p class="voices-caption">お客様が心の中で感じやすい不安（例）</p>
+            <p class="voice">ストーンを足してもらったけど、結局いくらになるんだろう…。施術中だから聞きづらい。</p>
+            <p class="voice">前回と同じデザインなのに、金額が違う気がする。明細がないから確かめられない。</p>
+            <p class="voice">ずっと通っていたけど、なんとなく高く取られている気がして、別のサロンに変えた。</p>
+            <p class="voices-note">※ Q&amp;Aサイトなどでも、料金の内訳がわからないことを理由にサロンを変えたという声が見られます。</p>
+          </div>
+
+          <div class="journey" aria-label="料金が見えない場合と見える場合の違い">
+            <div class="journey-row bad">
+              <span class="journey-label">料金が見えないと</span>
+              <ol>
+                <li>いくらか<br>わからない</li>
+                <li>「高いかも」<br>と疑う</li>
+                <li>何も言わず<br>来なくなる</li>
+              </ol>
+            </div>
+            <div class="journey-row good">
+              <span class="journey-label">料金が見えると</span>
+              <ol>
+                <li>その場で<br>合計がわかる</li>
+                <li>納得して<br>選べる</li>
+                <li>安心して<br>また来店</li>
+              </ol>
+            </div>
+            <p class="journey-note">不満を口に出さないまま離れていくお客様がいちばん防ぎにくいもの。salonoteは、そもそも不安が生まれないお会計をつくります。</p>
+          </div>
+        </div>
+
+        <ul class="trust-benefits">
+          <li>
+            <h3>「ぼったくり？」と思わせない</h3>
+            <p>メニューごとの単価・数量・値引き・消費税まで、お客様と同じ画面で確認。追加した分がいくらかを、その場で正直に伝えられます。</p>
+          </li>
+          <li>
+            <h3>追加の提案が「押し売り」にならない</h3>
+            <p>金額を見ながら選んでもらえるので、パーツやアートの追加もお客様の納得のうえ。客単価アップと満足度を両立できます。</p>
+          </li>
+          <li>
+            <h3>「前回いくらだった？」にすぐ答えられる</h3>
+            <p>確定した会計はお客様ごとのカルテに明細つきで残ります。前回との違いも、履歴を見ながら説明できます。</p>
+          </li>
+        </ul>
+
+        <div class="ltv">
+          <div class="ltv-figure">
+            <span class="ltv-label">お客様1人が1年間通ってくれると（例）</span>
+            <strong class="ltv-value">84,000<small>円</small></strong>
+            <span class="ltv-calc">客単価 7,000円 × 月1回 × 12か月</span>
+          </div>
+          <p class="ltv-text">失客を<strong>1人防ぐだけ</strong>で、プロ版（15,000円）の<strong>5倍以上</strong>の売上を守れる計算です。料金の見える化は、お客様への思いやりであり、サロンの利益を守る仕組みでもあります。</p>
+        </div>
       </div>
     </section>
 
@@ -844,6 +920,10 @@
           <details>
             <summary>施術中の「料金の見える化」とは何ですか？</summary>
             <p>施術メニューやストーン・アートなどを追加するたびに、割引前の合計、値引き、消費税、お支払い合計が自動で再計算される機能です。「お客様に見せる」を押すと、管理情報を隠した明細画面をそのままお客様に見せられるので、お会計で「思っていたより高い」と感じさせるすれ違いを防げます。</p>
+          </details>
+          <details>
+            <summary>お客様にとってはどんなメリットがありますか？</summary>
+            <p>施術中に追加や変更をしても、その場で合計金額がわかるので「結局いくらになるんだろう」という不安がなくなります。お会計ではメニューごとの明細を見て納得して支払えるため、料金への不信感が生まれにくく、サロンにとっても失客の防止やリピートにつながります。</p>
           </details>
           <details>
             <summary>SquareやAirレジなどの決済サービスと一緒に使えますか？</summary>
