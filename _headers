@@ -1,0 +1,7 @@
+# Cloudflare Pages: keep the pages.dev hostnames out of search results.
+# The canonical site is https://salonote.ohm.software/
+https://salonote.pages.dev/*
+  X-Robots-Tag: noindex
+
+https://:version.salonote.pages.dev/*
+  X-Robots-Tag: noindex
