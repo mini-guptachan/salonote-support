@@ -67,11 +67,11 @@ strong { font-weight: 700; }
 .btn-outline { background: #fff; color: var(--accent); border: 2px solid var(--line); box-shadow: none; }
 .btn-outline:hover { border-color: var(--lavender); box-shadow: var(--shadow-sm); }
 /* Official Apple badge: shown unmodified, min. 40px tall, with clear space around it */
-.store-badge { display: inline-block; flex: none; line-height: 0; border-radius: 12px; transition: transform .2s ease, opacity .2s ease; }
+.store-badge { display: inline-block; flex: none; line-height: 0; transition: transform .2s ease, opacity .2s ease; }
 .store-badge:hover { transform: translateY(-2px); }
-.store-badge img { display: block; width: auto; height: 40px; max-width: none; }
-.hero-cta .store-badge img { height: 54px; }
-.final-actions .store-badge img { height: 60px; }
+.store-badge img { display: block; width: auto; height: 41px; max-width: none; }
+.hero-cta .store-badge img { height: 55px; }
+.final-actions .store-badge img { height: 62px; }
 .store-note { font-size: 13px; font-weight: 700; color: var(--ink-soft); }
 .link-arrow { color: var(--accent); font-weight: 700; text-decoration: none; }
 .link-arrow::after { content: " ↓"; }
