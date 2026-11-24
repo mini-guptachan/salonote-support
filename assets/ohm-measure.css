@@ -1,0 +1,20 @@
+/* Ohm Software: the optional analytics control in a product site's home page footer (see ohm-analytics.js).
+   It takes its colours and type from the footer it sits in (currentColor, inherited font), so one file fits every site. */
+.ohm-measure{flex:0 0 100%;box-sizing:border-box;width:100%;margin:14px 0 0;max-width:46em;font-size:13px;line-height:1.7;text-align:start}
+.ohm-measure summary{display:inline-flex;align-items:center;gap:.5em;min-height:44px;cursor:pointer;list-style:none;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
+.ohm-measure summary::-webkit-details-marker{display:none}
+.ohm-measure summary::before{content:"+";display:inline-block;width:1em;text-align:center;text-decoration:none;font-weight:700}
+.ohm-measure[open] summary::before{content:"−"}
+.ohm-measure summary:focus-visible,.ohm-measure button:focus-visible,.ohm-measure a:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:6px}
+.ohm-measure-body{padding:4px 0 8px}
+.ohm-measure-body p{margin:8px 0 0;max-width:none;font-size:inherit;line-height:inherit;color:inherit}
+.ohm-measure-body ul{margin:6px 0 0;padding-inline-start:1.4em;list-style:disc}
+.ohm-measure-body li{margin:3px 0 0;font-size:inherit;line-height:inherit;color:inherit}
+.ohm-measure-body a{color:inherit;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
+.ohm-measure .ohm-measure-status{margin-top:14px;font-weight:700}
+.ohm-measure-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.ohm-measure-actions[hidden]{display:none}
+.ohm-measure-actions button{appearance:none;-webkit-appearance:none;margin:0;min-height:44px;padding:8px 18px;border:1.5px solid currentColor;border-radius:999px;background:transparent;color:inherit;font:inherit;font-weight:700;line-height:1.4;cursor:pointer}
+.ohm-measure-actions button[aria-pressed="true"]{box-shadow:inset 0 0 0 1.5px currentColor}
+.ohm-measure-actions button[aria-pressed="true"]::before{content:"✓\00a0"}
+@media (forced-colors:active){.ohm-measure-actions button{border-color:ButtonText}}
