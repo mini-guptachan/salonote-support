@@ -2,11 +2,11 @@
 
 > salonote（サロノート）は、個人・小規模のネイルサロン・美容室向けのiPhone・iPadアプリです。施術中に追加したメニューやパーツの料金をリアルタイムで合計し、お客様に明細を見せながら会計できます。顧客カルテ、予約カレンダー、会計履歴、料金表をひとつに管理できます。無料版は顧客5名まで、プロ版は買い切り15,000円（月額料金なし）です。
 
-最終更新: 2026-11-18
+最終更新: 2026-11-24
 
 ## 基本情報
 
-- 正式名称（App Store）: salonote ネイルサロン・美容室の管理
+- 正式名称（App Store）: salonote ネイルサロン・美容室の顧客カルテ
 - 読み方: サロノート
 - 公式サイト: https://salonote.ohm.software/
 - App Store: https://apps.apple.com/jp/app/id6805546874
@@ -55,8 +55,16 @@
 ## ページ
 
 - [トップページ（機能・料金・よくある質問）](https://salonote.ohm.software/)
+- [美容室の方へ（髪カルテ・カラーレシピのデモ）](https://salonote.ohm.software/hair-salon/)
+- [ネイルサロンの予約管理](https://salonote.ohm.software/nail-salon-reservation/)
+- [美容院・美容室の予約管理](https://salonote.ohm.software/hair-salon-reservation/)
+- [お役立ち記事の一覧](https://salonote.ohm.software/guide/)
 - [ネイルの追加料金トラブルを防ぐ5つの方法](https://salonote.ohm.software/guide/nail-extra-fee-trouble/)
 - [ネイルサロンの料金計算の基本（税込・税抜、端数処理、割引）](https://salonote.ohm.software/guide/nail-price-calculation/)
 - [顧客管理アプリは月額と買い切りどちらがお得？](https://salonote.ohm.software/guide/nail-salon-app-cost/)
+- [ネイルサロンの料金表の作り方](https://salonote.ohm.software/guide/nail-price-list/)
+- [ネイルサロンのカルテに書く項目](https://salonote.ohm.software/guide/nail-karte/)
+- [美容室のカルテに書く内容（カラーレシピと注意事項）](https://salonote.ohm.software/guide/hair-salon-karte/)
+- [個人サロンの顧客管理（紙・エクセル・アプリ）](https://salonote.ohm.software/guide/salon-customer-management/)
 - [サポート・よくある質問](https://salonote.ohm.software/support/)
 - [プライバシーポリシー](https://salonote.ohm.software/privacy/)

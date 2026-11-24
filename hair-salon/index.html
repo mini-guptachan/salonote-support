@@ -34,7 +34,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@700;900&display=swap">
   <link rel="stylesheet" href="../assets/lp.css?v=20261124">
-  <link rel="stylesheet" href="../assets/guide.css?v=20261001">
+  <link rel="stylesheet" href="../assets/guide.css?v=20261125">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -121,6 +121,48 @@
         <h2 id="recipe">カラーレシピを、次の来店に活かす</h2>
         <p>施術ごとに、塗布場所（根元・中間〜毛先など）別に薬剤名と色番、量、オキシ、比率、放置時間を記録できます。パーマはロッド、縮毛矯正はアイロン温度も残せます。</p>
         <p><strong>前回のレシピをコピーして記録</strong>できるので、毎回の入力は変えた部分だけで済みます。仕上がりの反応と「次回の方針」を書いておくと、次に開いたときにカルテの上に申し送りとして表示されます。</p>
+        <div class="recipe-demo" id="recipeDemo">
+          <p class="recipe-demo-tag">さわって試せます</p>
+          <div class="recipe-chart">
+            <div class="recipe-customer"><b>青木 美咲 様</b><span>髪カルテ（見本）</span></div>
+            <p class="recipe-caution"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4M12 17h.01M10.3 3.9L2.5 17.5A2 2 0 004.2 20.5h15.6a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/></svg><span><b>注意事項</b>カラー剤で頭皮がしみた経験あり。最終確認日 10月12日</span></p>
+            <div class="recipe-block">
+              <h3>前回のレシピ <small>10月12日・カラー</small></h3>
+              <ul class="recipe-rows">
+                <li class="recipe-row"><span class="recipe-place">根元</span><span class="recipe-mix">8NB 60g ＋ オキシ6%（1:1）</span><span class="recipe-time">放置 25分</span></li>
+                <li class="recipe-row"><span class="recipe-place">中間〜毛先</span><span class="recipe-mix">9A 40g ＋ オキシ3%（1:2）</span><span class="recipe-time">放置 15分</span></li>
+              </ul>
+              <p class="recipe-handoff"><b>次回の方針（前回からの申し送り）</b>毛先が少し暗く感じたとのこと。次回は毛先を1レベル明るく。</p>
+              <button type="button" class="btn" id="recipeCopy" hidden>前回のレシピをコピーして記録</button>
+            </div>
+            <div class="recipe-block" id="recipeEditor">
+              <h3 id="recipeEditorTitle" tabindex="-1">今日の記録 <small>前回のコピーから</small></h3>
+              <ul class="recipe-rows" id="recipeToday">
+                <li class="recipe-row"><span class="recipe-place">根元</span><span class="recipe-mix">8NB 60g ＋ オキシ6%（1:1）</span><span class="recipe-time">放置 25分</span></li>
+                <li class="recipe-row"><span class="recipe-place">中間〜毛先</span><span class="recipe-mix"><span class="is-changed">10A<em class="recipe-badge">変更</em></span> 40g ＋ オキシ3%（1:2）</span><span class="recipe-time">放置 15分</span></li>
+              </ul>
+              <div class="recipe-controls" id="recipeControls" hidden>
+                <fieldset class="recipe-field">
+                  <legend>中間〜毛先の色番</legend>
+                  <label><input type="radio" name="recipeShade" value="9A" checked><span>9A（前回と同じ）</span></label>
+                  <label><input type="radio" name="recipeShade" value="10A"><span>10A（1レベル明るく）</span></label>
+                  <label><input type="radio" name="recipeShade" value="8A"><span>8A（1レベル暗く）</span></label>
+                </fieldset>
+                <div class="recipe-field" role="group" aria-labelledby="recipeTimeLabel">
+                  <span class="recipe-field-label" id="recipeTimeLabel">根元の放置時間</span>
+                  <span class="recipe-stepper">
+                    <button type="button" id="recipeTimeDown" aria-label="根元の放置時間を5分短くする">−</button>
+                    <output id="recipeTimeOut" for="recipeTimeDown recipeTimeUp">25分</output>
+                    <button type="button" id="recipeTimeUp" aria-label="根元の放置時間を5分長くする">＋</button>
+                  </span>
+                </div>
+                <button type="button" class="btn recipe-reset" id="recipeReset">最初に戻す</button>
+              </div>
+            </div>
+          </div>
+          <p class="recipe-status" id="recipeStatus" role="status" aria-live="polite">前回から変えたのは1か所だけ。ほかの項目は入力し直していません。</p>
+          <p class="recipe-demo-note">※ 髪カルテの「前回のレシピをコピー」の流れを再現したデモです。お客様の名前や配合は見本で、配合をすすめるものではありません。入力した内容はどこにも送信・保存されません。</p>
+        </div>
         <p><img src="../assets/shots/iphone-hair_chart.jpg" alt="髪カルテ画面。注意事項、前回からの申し送り、カラーレシピの履歴が表示されている" width="506" height="1100" loading="lazy" style="display:block;max-width:300px;width:100%;height:auto;margin:0 auto"></p>
 
         <h2 id="safety">注意事項を、担当者以外にも確実に</h2>
@@ -139,7 +181,7 @@
             </tbody>
           </table>
         </div>
-        <p>施術写真、スタッフ専用メモ、来店履歴、会計履歴、予約も同じカルテにまとまります。予約の管理については<a href="../hair-salon-reservation/">美容院・美容室の予約管理</a>で詳しくご紹介しています。</p>
+        <p>施術写真、スタッフ専用メモ、来店履歴、会計履歴、予約も同じカルテにまとまります。予約の管理については<a href="../hair-salon-reservation/">美容院・美容室の予約管理</a>で詳しくご紹介しています。カルテに書く内容の考え方は、<a href="../guide/hair-salon-karte/">美容室のカルテに書く内容</a>にまとめています。</p>
 
         <h2 id="pricing">料金の見える化は、美容室のお会計にも</h2>
         <p>カット、カラー、トリートメント、指名料などを追加するたびに、合計金額がその場で更新されます。お客様にそのまま見せられる明細画面があるので、施術中の追加メニューも金額を確認しながら提案できます。料金表のカテゴリーは美容室向けのものが最初から用意されていて、名前の変更や非表示、並べ替えでお店のメニューに合わせられます。</p>
@@ -197,5 +239,6 @@
     </div>
   </footer>
   <script src="../assets/site.js?v=20261001" defer></script>
+  <script src="../assets/recipe.js?v=20261125" defer></script>
 </body>
 </html>
