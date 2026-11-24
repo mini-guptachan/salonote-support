@@ -467,6 +467,12 @@ input[type="range"] { width: 100%; margin: 10px 0 24px; accent-color: var(--acce
 .site-footer nav a { color: var(--ink-soft); font-size: 13px; text-decoration: none; }
 .site-footer nav a:hover { color: var(--accent); }
 .site-footer small { color: var(--muted); font-size: 12px; }
+/* Ohm Software publisher lockup (footer). The image is an exact copy of https://ohm.software/assets/ohm-software.svg */
+p.ohm-publisher { width: 100%; margin: -8px 0 0; padding: 0; line-height: 0; }
+.ohm-publisher a { display: inline-flex; align-items: center; min-height: 44px; margin: 0 -8px; padding: 0 8px; border: 0; border-radius: 10px; background: none; box-shadow: none; text-decoration: none; }
+.ohm-publisher img { display: block; width: 179px; height: 24px; max-width: 100%; margin: 0; border: 0; border-radius: 0; box-shadow: none; }
+.ohm-publisher a:hover { opacity: .8; }
+.ohm-publisher a:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; opacity: 1; }
 
 /* sticky mobile cta */
 .sticky-cta { display: none; }
