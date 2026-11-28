@@ -7,7 +7,7 @@
   --accent-deep: #684593;
   --lavender: #8f70b8;
   --coral: #e085b0;
-  --rose: #b04d73;
+  --rose: #963b60;
   --blush: #fbe8f4;
   --lilac: #efe7fb;
   --cream: #fffbfd;
@@ -371,7 +371,7 @@ h1.eyebrow { font-family: var(--font-body); line-height: 1.6; letter-spacing: .0
 .journey-row ol { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; counter-reset: none; }
 .journey-row li { position: relative; display: grid; place-items: center; min-height: 72px; padding: 10px 8px; border-radius: 16px; text-align: center; font-size: 13px; font-weight: 700; line-height: 1.5; }
 .journey-row li:not(:last-child)::after { content: "→"; position: absolute; right: -18px; top: 50%; transform: translateY(-50%); color: var(--muted); font-weight: 800; }
-.journey-row.bad li { background: #f3f1f4; color: #7d7385; }
+.journey-row.bad li { background: #f3f1f4; color: #695f71; }
 .journey-row.bad li:last-child { background: #efe6ea; color: var(--rose); }
 .journey-row.good li { background: rgba(128,92,168,.09); color: var(--accent-deep); }
 .journey-row.good li:last-child { background: var(--grad); color: #fff; }
